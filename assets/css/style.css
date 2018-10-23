@@ -1,0 +1,39 @@
+body {
+    background-color: #ccc;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header h1 {
+    background: red;
+}
+
+.main-header p {
+    background: blue;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: green;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+.container {
+    background: #fff;
+    display: grid;
+    gap: 1rem;
+}
