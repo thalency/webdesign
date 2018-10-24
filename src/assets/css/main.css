@@ -1,10 +1,10 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5
 }
 
 .main-header {
@@ -13,62 +13,60 @@ body {
     flex-direction: column;
     align-items: center;
     grid-area: header;
-    background-color: #ffffff;
+    background-color: #fff
 }
 
 .main-header h1 {
-    background: red;
 }
 
 .main-content {
     grid-area: content;
-    align-self: center;
+    align-self: center
 }
 
 .main-nav {
-    grid-area: nav;
+    grid-area: nav
 }
 
 .main-nav ul {
     display: flex;
     justify-content: space-evenly;
-    list-style: none;
+    list-style: none
 }
 
 .main-nav a {
     text-decoration: none;
-    color: green;
+    color: green
 }
 
 .main-nav a:hover {
     text-decoration: underline;
-    color: darkgreen;
+    color: #006400
 }
 
 .container {
+    background: #ffffff;
     grid-area: container;
-    background: #fff;
     display: grid;
     gap: 1rem;
     margin: 0 4rem;
     padding: 2rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "content content" "aside aside";
+    grid-template-areas: "content content" "aside aside"
 }
 
 .main-aside {
-    grid-area: aside;
+    grid-area: aside
 }
 
 .wrapper {
     display: grid;
-    grid-template-areas: "header" "container" "footer";
+    grid-template-areas: "header" "container" "footer"
 }
 
 .main-footer {
-    color: #C3C3C3;
+    color: #c3c3c3;
     padding: 2rem 6rem;
     grid-area: footer;
-    background-color: #333;
-
+    background-color: #333
 }
