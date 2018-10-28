@@ -1,0 +1,56 @@
+@import 'reset';
+@import 'colors';
+
+/* WRAPPER */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    color: darken($color-slategray, 25%);
+}
+
+/* HEADER */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $color-whitesmoke;
+}
+
+/* NAV */
+.main-nav__ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-nav__a {
+    color: $color-tomato;
+}
+
+.main-nav__a:hover {
+    color: darken($color-tomato, 25%);
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "content content" "aside aside"
+}
+
+/* MAIN-CONTENT */
+.main-content {
+    background: $color-whitesmoke;;
+    grid-area: content;
+    align-self: center
+}
+
+.main-aside {
+    grid-area: aside
+}
+
+/* FOOTER */
+.main-footer {
+    color: $color-whitesmoke;
+    background-color: #333
+}
