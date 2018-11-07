@@ -2,11 +2,13 @@ let path = {
     sass: {
         src: 'src/assets/scss/main.scss',
         dest: 'public/assets/css',
-        inject: 'public/assets/css/*.css'
+        inject: 'public/assets/css/*.css',
+        watch: 'src/assets/scss/*.scss'
     },
     html: {
         src: 'src/*.html',
-        dest: 'public'
+        dest: 'public',
+        watch: 'src/*.html'
     }
 };
 
@@ -48,8 +50,8 @@ gulp.task('sass', function () {
 
 });
 
-gulp.task('sass:watch', () => gulp.watch(path.sass.src, gulp.series('sass')));
-gulp.task('html:watch', () => gulp.watch(path.html.src, gulp.series('html')));
+gulp.task('sass:watch', () => gulp.watch(path.sass.watch, gulp.series('sass')));
+gulp.task('html:watch', () => gulp.watch(path.html.watch, gulp.series('html')));
 gulp.task('watch', gulp.parallel('sass:watch', 'html:watch'));
 
 gulp.task('default', gulp.series('sass', 'html', 'browser-sync', 'watch'));

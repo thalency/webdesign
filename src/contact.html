@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webovky</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    inject:css
+    endinject
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header class="main-header">
+        <h1 class="main-header__h1"><a class="main-nav__a" href="/">LoremArticles</a></h1>
+        <nav class="main-nav">
+            <ul class="main-nav__ul">
+                <li><a class="main-nav__a" href="/">
+                    <i class="fas fa-home"></i>&nbsp;Domů</a>
+                </li>
+                <li><a class="main-nav__a" href="#">
+                    <i class="fas fa-star"></i>&nbsp;Novinky</a>
+                </li>
+                <li><a class="main-nav__a" href="#">
+                    <i class="fas fa-newspaper"></i>&nbsp;Články</a>
+                </li>
+                <li><a class="main-nav__a" href="#">
+                    <i class="fas fa-book-open"></i>&nbsp;Recenze</a>
+                </li>
+                <li><a class="main-nav__a main-nav__a-active" href="contact.html">
+                    <i class="fas fa-phone"></i>&nbsp;Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <main class="main-content">
+            <section>
+                <form action="#">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                              style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Lor Em</td>
+                        <td>lor.em@lorem.la</td>
+                        <td>123456789</td>
+                    </tr>
+                    <tr>
+                        <td>Ips Um</td>
+                        <td>ips.um@lorem.la</td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr>
+                        <td>Dol Or</td>
+                        <td>dol.or@lorem.la</td>
+                        <td>123456789</td>
+                    </tr>
+                    <tr>
+                        <td>Sit Amet</td>
+                        <td>sit.amet@lorem.la</td>
+                        <td>321456987</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <aside class="main-aside">
+            <article>
+                <h1>About</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aut, eos!</p>
+            </article>
+        </aside>
+
+    </div>
+
+    <footer class="main-footer">
+        &copy;2018
+    </footer>
+
+</div>
+</body>
+</html>

@@ -5,22 +5,32 @@
     <title>Webovky</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <!-- inject:css -->
-    <!-- endinject -->
+    inject:css
+    endinject
 </head>
 <body>
 
 <div class="wrapper">
 
     <header class="main-header">
-        <h1 class="main-header__h1">Blog</h1>
+        <h1 class="main-header__h1"><a class="main-nav__a" href="/">LoremArticles</a></h1>
         <nav class="main-nav">
             <ul class="main-nav__ul">
-                <li><a class="main-nav__a" href="#"><i class="fas fa-home"></i>&nbsp;Domů</a></li>
-                <li><a class="main-nav__a" href="#"><i class="fas fa-star"></i>&nbsp;Novinky</a></li>
-                <li><a class="main-nav__a" href="#"><i class="fas fa-newspaper"></i>&nbsp;Články</a></li>
-                <li><a class="main-nav__a" href="#"><i class="fas fa-book-open"></i>&nbsp;Recenze</a></li>
-                <li><a class="main-nav__a" href="#"><i class="fas fa-phone"></i>&nbsp;Kontakt</a></li>
+                <li><a class="main-nav__a main-nav__a-active" href="/">
+                    <i class="fas fa-home"></i>&nbsp;Domů</a>
+                </li>
+                <li><a class="main-nav__a" href="#">
+                    <i class="fas fa-star"></i>&nbsp;Novinky</a>
+                </li>
+                <li><a class="main-nav__a" href="#">
+                    <i class="fas fa-newspaper"></i>&nbsp;Články</a>
+                </li>
+                <li><a class="main-nav__a" href="#">
+                    <i class="fas fa-book-open"></i>&nbsp;Recenze</a>
+                </li>
+                <li><a class="main-nav__a" href="contact.html">
+                    <i class="fas fa-phone"></i>&nbsp;Kontakt</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -29,25 +39,41 @@
 
         <main class="main-content">
             <section>
-                TODO:
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate, doloribus error fugit
-                harum
-                illo
-                ipsam itaque magni, nesciunt nostrum omnis pariatur quod recusandae sapiente ut veniam vitae voluptas
-                voluptates. Animi, corporis cum debitis deserunt distinctio eos et ipsa libero magni modi, molestiae
-                recusandae
-                repudiandae rerum similique sit, tempora vel! Commodi ducimus facere, ipsam iure nihil quo quod sunt!
-                Aliquid
-                doloribus error impedit iure molestiae nemo, voluptas! Ab accusamus aliquid consequatur culpa cumque
-                dolorem
-                eaque enim esse est eum excepturi, facilis hic illum inventore iusto labore laudantium placeat provident
-                quibusdam reprehenderit rerum sapiente sunt, temporibus totam voluptatibus. Neque, nisi rerum!
+                <article>
+                    <h1>Lorem ipsum</h1>
+                    <img src="https://picsum.photos/200" alt="Lorem ipsum - image">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores dignissimos,
+                        eaque facere ipsa iusto molestias nobis numquam quae quas quos sequi tempora tenetur voluptas.
+                        <span>...<a href="#">Read more</a></span>
+                    </p>
+                </article>
+                <article>
+                    <h1>Asperiores</h1>
+                    <img src="https://picsum.photos/201" alt="Asperiores - image">
+                    <p>
+                        Asperiores autem blanditiis, culpa cum laboriosam magnam mollitia nobis obcaecati quas unde!
+                        Accusamus aperiam architecto blanditiis commodi cumque, delectus itaque maiores quia rem rerum?
+                        <span>...<a href="#">Read more</a></span>
+                    </p>
+                </article>
+                <article>
+                    <h1>Eius, laudantium</h1>
+                    <img src="https://picsum.photos/202" alt="Eius, laudantium - image">
+                    <p>
+                        Eius, laudantium, nostrum. Ab, aut consectetur cupiditate debitis doloribus earum eligendi ipsum
+                        laborum laudantium minima numquam placeat quam, quia, quibusdam ratione rerum sed sit vero?
+                        <span>...<a href="#">Read more</a></span>
+                    </p>
+                </article>
             </section>
         </main>
 
         <aside class="main-aside">
-            AAA
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aut, eos!
+            <article>
+                <h1>About</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aut, eos!</p>
+            </article>
         </aside>
 
     </div>
