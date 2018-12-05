@@ -5,8 +5,8 @@
     <title>Webovky</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    inject:css
-    endinject
+    <!--inject:css-->
+    <!--endinject-->
 </head>
 <body>
 
@@ -37,30 +37,38 @@
 
     <div class="container">
 
-        <main class="main-content">
-            <section>
-                <article>
-                    <h1>Lorem ipsum</h1>
-                    <img src="https://picsum.photos/200" alt="Lorem ipsum - image">
-                    <p>
+        <main class="main-content p-1rem">
+            <section class="content-section">
+                <h1 class="section__h1">Welcome</h1>
+                <p class="content__p--default">
+                    Enim et illum libero maiores, molestiae natus officia pariatur, quas quis ratione reprehenderit,
+                    saepe vero voluptate! Blanditiis.
+                </p>
+            </section>
+            <section class="content-section">
+                <h1 class="section__h1">Articles</h1>
+                <article class="article">
+                    <h1 class="article__h1">Lorem ipsum</h1>
+                    <img src="https://picsum.photos/200" alt="Lorem ipsum - image" class="article__img">
+                    <p class="article__p">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores dignissimos,
                         eaque facere ipsa iusto molestias nobis numquam quae quas quos sequi tempora tenetur voluptas.
                         <span>...<a href="#">Read more</a></span>
                     </p>
                 </article>
-                <article>
-                    <h1>Asperiores</h1>
-                    <img src="https://picsum.photos/201" alt="Asperiores - image">
-                    <p>
+                <article class="article">
+                    <h1 class="article__h1">Asperiores</h1>
+                    <img src="https://picsum.photos/201" alt="Asperiores - image" class="article__img">
+                    <p class="article__p">
                         Asperiores autem blanditiis, culpa cum laboriosam magnam mollitia nobis obcaecati quas unde!
                         Accusamus aperiam architecto blanditiis commodi cumque, delectus itaque maiores quia rem rerum?
                         <span>...<a href="#">Read more</a></span>
                     </p>
                 </article>
-                <article>
-                    <h1>Eius, laudantium</h1>
-                    <img src="https://picsum.photos/202" alt="Eius, laudantium - image">
-                    <p>
+                <article class="article">
+                    <h1 class="article__h1">Eius, laudantium</h1>
+                    <img src="https://picsum.photos/202" alt="Eius, laudantium - image" class="article__img">
+                    <p class="article__p">
                         Eius, laudantium, nostrum. Ab, aut consectetur cupiditate debitis doloribus earum eligendi ipsum
                         laborum laudantium minima numquam placeat quam, quia, quibusdam ratione rerum sed sit vero?
                         <span>...<a href="#">Read more</a></span>
@@ -69,7 +77,7 @@
             </section>
         </main>
 
-        <aside class="main-aside">
+        <aside class="main-aside p-1rem">
             <article>
                 <h1>About</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aut, eos!</p>
@@ -78,10 +86,11 @@
 
     </div>
 
-    <footer class="main-footer">
+    <footer class="main-footer p-1rem2rem">
         &copy;2018
     </footer>
 
 </div>
+
 </body>
 </html>
