@@ -9,12 +9,19 @@ let path = {
         src: 'src/*.html',
         dest: 'public',
         watch: 'src/*.html'
+    },
+    js: {
+        src: 'src/assets/js/main.js',
+        dest: 'public/assets/js',
+        inject: 'public/assets/js/*.js',
+        watch: 'src/assets/js/*.js'
     }
 };
 
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
@@ -31,7 +38,7 @@ gulp.task('browser-sync', function (done) {
 
 gulp.task('html', function () {
     return gulp.src(path.html.src)
-        .pipe(inject(gulp.src(path.sass.inject, {read: false}), {
+        .pipe(inject(gulp.src([path.sass.inject, path.js.inject], {read: false}), {
             addRootSlash: false,
             ignorePath: 'public',
         }))
@@ -47,12 +54,19 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(path.sass.dest))
         .pipe(browsersync.stream())
+});
 
+gulp.task('js', function () {
+    return gulp.src(path.js.src)
+        .pipe(uglify())
+        .pipe(gulp.dest(path.js.dest))
+        .pipe(browsersync.stream())
 });
 
 gulp.task('sass:watch', () => gulp.watch(path.sass.watch, gulp.series('sass')));
+gulp.task('js:watch', () => gulp.watch(path.js.watch, gulp.series('js')));
 gulp.task('html:watch', () => gulp.watch(path.html.watch, gulp.series('html')));
-gulp.task('watch', gulp.parallel('sass:watch', 'html:watch'));
+gulp.task('watch', gulp.parallel('sass:watch', 'js:watch', 'html:watch'));
 
-gulp.task('default', gulp.series('sass', 'html', 'browser-sync', 'watch'));
+gulp.task('default', gulp.series('sass', 'js', 'html', 'browser-sync', 'watch'));
 
