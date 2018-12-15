@@ -1,6 +1,71 @@
-@import 'reset';
-@import 'variables';
-@import 'globals';
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: url("../img/circuit.png") repeat;
+}
+
+a {
+  color: tomato;
+}
+
+a:hover {
+  color: #c71e00;
+}
+
+p {
+  word-break: break-all;
+}
+
+input[type=text], select, textarea {
+  padding: 1rem;
+  display: block;
+  box-sizing: border-box;
+  margin-top: .6rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type=submit] {
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: tomato;
+}
+
+input[type=submit]:hover {
+  background-color: #c71e00;
+}
 
 /* PADDING & MARGIN*/
 .p-1rem {
@@ -45,7 +110,7 @@
 }
 
 .main-nav__a, .main-header__a {
-  color: $color-whitesmoke
+  color: whitesmoke;
 }
 
 .nav-active {
@@ -69,7 +134,7 @@
 }
 
 .main-nav__a:hover, .main-header__a:hover, .main-nav__a-active {
-  color: $color-tomato;
+  color: tomato;
 }
 
 .table {
@@ -84,16 +149,16 @@
 .table__th {
   padding: 1rem;
   text-align: left;
-  background-color: $color-tomato;
-  color: $color-whitesmoke;
+  background-color: tomato;
+  color: whitesmoke;
 }
 
 .table__tr:nth-child(even) {
-  background-color: darken($color-whitesmoke, 5%);
+  background-color: #e8e8e8;
 }
 
 .table__tr:hover {
-  background-color: darken($color-whitesmoke, 10%);
+  background-color: gainsboro;
 }
 
 .table-helper {
@@ -105,11 +170,11 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 14rem;
-  grid-template-areas: "header header" "content aside" "content aside" "footer footer"
+  grid-template-areas: "header header" "content aside" "content aside" "footer footer";
 }
 
 .main-content {
-  background: lighten($color-whitesmoke, 100%);
+  background: white;
   grid-area: content;
   align-self: center;
   font-size: 1.2rem;
@@ -118,14 +183,14 @@
 }
 
 .main-aside {
-  background: lighten($color-whitesmoke, 100%);
+  background: white;
   grid-area: aside;
   font-size: 1.2rem;
   padding: 1rem;
 }
 
 .main-footer {
-  color: $color-whitesmoke;
+  color: whitesmoke;
   background-color: #333;
   text-align: center;
   grid-area: footer;
@@ -139,12 +204,13 @@
 }
 
 .section__heading {
-  font-size: $text-size-heading;
-  text-decoration: $color-tomato underline;
+  font-size: 2.4rem;
+  -webkit-text-decoration: tomato underline;
+          text-decoration: tomato underline;
 }
 
 .article {
-  border: .1rem solid darken($color-whitesmoke, 5%);
+  border: 0.1rem solid #e8e8e8;
   padding: 1rem;
   display: grid;
   gap: 1rem;
@@ -154,13 +220,13 @@
 }
 
 .article_heading {
-  font-size: $text-size-heading;
+  font-size: 2.4rem;
   grid-area: a-h1;
 }
 
 .article__img {
   width: 10rem;
-  border: .1rem solid $color-whitesmoke;
+  border: 0.1rem solid whitesmoke;
   grid-area: a-img;
 }
 
@@ -170,13 +236,13 @@
 
 .home__image {
   background-size: cover;
-  background: url("https://picsum.photos/1366/400") center center $color-whitesmoke;
+  background: url("https://picsum.photos/1366/400") center center whitesmoke;
   width: 100%;
   height: 15rem;
 }
 
 .sponsor {
-  border: .1rem solid $color-whitesmoke;
+  border: 0.1rem solid whitesmoke;
   padding: 1rem;
 }
 
@@ -185,7 +251,7 @@
 }
 
 .sponsor__img {
-  border: .1rem solid $color-whitesmoke;
+  border: 0.1rem solid whitesmoke;
   max-width: 30rem;
 }
 
@@ -195,37 +261,42 @@
 
 .youtube {
   color: #ff0000;
-  &:hover {
-    color: darken(#ff0000, 25%)
-  }
+}
+
+.youtube:hover {
+  color: maroon;
 }
 
 .twitch {
   color: #6441A5;
-  &:hover {
-    color: darken(#6441A5, 25%)
-  }
+}
+
+.twitch:hover {
+  color: #2d1d4a;
 }
 
 .twitter {
   color: #38A1F3;
-  &:hover {
-    color: darken(#38A1F3, 25%)
-  }
+}
+
+.twitter:hover {
+  color: #0a5fa2;
 }
 
 .facebook {
   color: #3B5998;
-  &:hover {
-    color: darken(#3B5998, 25%)
-  }
+}
+
+.facebook:hover {
+  color: #17233c;
 }
 
 .instagram {
   color: #bc2a8d;
-  &:hover {
-    color: darken(#bc2a8d, 25%)
-  }
+}
+
+.instagram:hover {
+  color: #54133f;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -261,12 +332,12 @@
     top: 12px;
     right: 12px;
     cursor: pointer;
-    color: $color-whitesmoke;
+    color: whitesmoke;
     font-size: 2rem;
   }
   .container {
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "content" "aside" "footer"
+    grid-template-areas: "header" "content" "aside" "footer";
   }
   .main-header__h1 {
     font-size: 1.6rem;
@@ -292,3 +363,5 @@
     height: 6rem;
   }
 }
+
+/*# sourceMappingURL=maps/main.css.map */

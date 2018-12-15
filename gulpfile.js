@@ -15,6 +15,11 @@ let path = {
         dest: 'public/assets/js',
         inject: 'public/assets/js/*.js',
         watch: 'src/assets/js/*.js'
+    },
+    img: {
+        src: 'src/assets/img/*',
+        dest: 'public/assets/img',
+        watch: 'src/assets/img/*'
     }
 };
 
@@ -49,7 +54,7 @@ gulp.task('html', function () {
 gulp.task('sass', function () {
     return gulp.src(path.sass.src)
         .pipe(sourcemaps.init())
-        .pipe(sass(/*{outputStyle: 'compact'}*/))
+        .pipe(sass({outputStyle: 'expanded'}))
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(path.sass.dest))
@@ -62,11 +67,17 @@ gulp.task('js', function () {
         .pipe(gulp.dest(path.js.dest))
         .pipe(browsersync.stream())
 });
+gulp.task('img', function () {
+    return gulp.src(path.img.src)
+        .pipe(gulp.dest(path.img.dest))
+        .pipe(browsersync.stream())
+});
 
+gulp.task('img:watch', () => gulp.watch(path.img.watch, gulp.series('img')));
 gulp.task('sass:watch', () => gulp.watch(path.sass.watch, gulp.series('sass')));
 gulp.task('js:watch', () => gulp.watch(path.js.watch, gulp.series('js')));
 gulp.task('html:watch', () => gulp.watch(path.html.watch, gulp.series('html')));
-gulp.task('watch', gulp.parallel('sass:watch', 'js:watch', 'html:watch'));
+gulp.task('watch', gulp.parallel('img:watch', 'sass:watch', 'js:watch', 'html:watch'));
 
-gulp.task('default', gulp.series('sass', 'js', 'html', 'browser-sync', 'watch'));
+gulp.task('default', gulp.series('img', 'sass', 'js', 'html', 'browser-sync', 'watch'));
 
